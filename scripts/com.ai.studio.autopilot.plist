@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0"><dict>
+  <key>Label</key><string>com.ai.studio.autopilot</string>
+  <key>ProgramArguments</key><array><string>$HOME/ai-studio/scripts/autopilot.sh</string></array>
+  <key>StartCalendarInterval</key><array><dict><key>Hour</key><integer>8</integer><key>Minute</key><integer>0</integer></dict><dict><key>Hour</key><integer>11</integer><key>Minute</key><integer>0</integer></dict><dict><key>Hour</key><integer>14</integer><key>Minute</key><integer>0</integer></dict><dict><key>Hour</key><integer>17</integer><key>Minute</key><integer>0</integer></dict><dict><key>Hour</key><integer>20</integer><key>Minute</key><integer>0</integer></dict><dict><key>Hour</key><integer>23</integer><key>Minute</key><integer>0</integer></dict></array>
+  <key>StandardOutPath</key><string>$HOME/ai-studio/logs/launchd.out</string>
+  <key>StandardErrorPath</key><string>$HOME/ai-studio/logs/launchd.err</string>
+</dict></plist>

@@ -1,0 +1,15 @@
+{
+ "name": "Children's story",
+ "examples": "bedtime stories, fables, learning songs",
+ "length_minutes": [3, 8],
+ "aspect": "16:9",
+ "shorts": 2,
+ "research": "none (original story); age-appropriate language check",
+ "visual_style": "storybook illustration, gentle camera moves, soft particles",
+ "art_style_line": "Warm storybook watercolour illustration, soft rounded shapes, gentle pastel colours, friendly faces.",
+ "characters": "yes: every speaking character gets mouth/eye patches",
+ "narration": "warm storyteller; distinct character voices",
+ "pacing": "slower: a picture change every 4–6 s; repeat key phrases",
+ "music": "soft, melodic",
+ "thumbnail": "main character, big and bright, 0–3 words"
+}

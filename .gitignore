@@ -1,0 +1,17 @@
+episodes/*/out/
+episodes/*/art/
+episodes/*/vo/lines/
+episodes/*/build/
+remotion/node_modules/
+remotion/public/
+remotion/src/data/
+build_cache/
+tools/
+bin/
+logs/
+*.mp4
+*.wav
+*.mp3
+.DS_Store
+__pycache__/
+.env

@@ -1,0 +1,15 @@
+{
+ "name": "Vertical short-form only",
+ "examples": "TikTok / Reels / Shorts series",
+ "length_minutes": [0.5, 1.5],
+ "aspect": "9:16",
+ "shorts": 0,
+ "research": "depends on topic (claim ledger for facts)",
+ "visual_style": "full-frame vertical scenes, big word-by-word captions, a hook in the first 2 s",
+ "art_style_line": "Bold, high-contrast illustration readable on a phone, simple backgrounds.",
+ "characters": "optional",
+ "narration": "fast, punchy",
+ "pacing": "a picture change every 1.5–3 s; loopable ending",
+ "music": "trend-friendly bed, low under the voice",
+ "thumbnail": "cover frame with the hook in 2–4 words"
+}

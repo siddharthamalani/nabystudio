@@ -1,0 +1,27 @@
+{
+  "name": "studio-remotion",
+  "private": true,
+  "version": "1.0.0",
+  "description": "STUDIO video engine: scenes, characters, motion graphics (Remotion + GSAP + Three.js)",
+  "scripts": {
+    "studio": "remotion studio src/index.jsx",
+    "render": "remotion render src/index.jsx"
+  },
+  "dependencies": {
+    "remotion": "4.0.542",
+    "@remotion/cli": "4.0.542",
+    "@remotion/renderer": "4.0.542",
+    "@remotion/three": "4.0.542",
+    "@remotion/transitions": "4.0.542",
+    "@remotion/motion-blur": "4.0.542",
+    "@remotion/google-fonts": "4.0.542",
+    "react": "19.1.10",
+    "react-dom": "19.1.10",
+    "gsap": "3.15.1",
+    "three": "0.187.0",
+    "@react-three/fiber": "9.8.2"
+  },
+  "allowScripts": {
+    "esbuild@0.28.1": true
+  }
+}

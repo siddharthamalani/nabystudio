@@ -1,0 +1,15 @@
+{
+ "name": "Animated explainer",
+ "examples": "history, science, how-it-works, 'the story of...'",
+ "length_minutes": [6, 9],
+ "aspect": "16:9",
+ "shorts": 3,
+ "research": "claim ledger required (every fact sourced; disputed claims hedged on screen)",
+ "visual_style": "illustrated characters + painted backgrounds, 3D depth parallax, motion graphics",
+ "art_style_line": "Clean painterly 2D animated-feature-film style, soft cel shading, cinematic lighting, rich colours, expressive readable faces.",
+ "characters": "yes: master drawing + mouth/eye patches for anyone who speaks",
+ "narration": "one narrator, conversational; character voices for quotes",
+ "pacing": "a picture change every 2–4 s; 2–3 long holds for punchlines",
+ "music": "light, playful bed; ducks under the voice",
+ "thumbnail": "one expressive face or striking object on the right, 0–4 words left"
+}

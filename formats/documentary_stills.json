@@ -1,0 +1,15 @@
+{
+ "name": "Documentary (stills + motion)",
+ "examples": "biographies, true crime, travel, nature",
+ "length_minutes": [10, 20],
+ "aspect": "16:9",
+ "shorts": 3,
+ "research": "claim ledger required; archival images credited",
+ "visual_style": "photo-real or painted stills, slow camera moves, depth parallax, maps and timelines",
+ "art_style_line": "Cinematic, naturalistic lighting, muted documentary colour grade, high detail.",
+ "characters": "optional: portraits with subtle motion; no lip sync",
+ "narration": "calm, authoritative narrator",
+ "pacing": "a picture change every 4–6 s; breathing room between sections",
+ "music": "atmospheric score; swells at chapter breaks",
+ "thumbnail": "one powerful image, 2–3 words"
+}

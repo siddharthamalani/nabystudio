@@ -1,0 +1,15 @@
+{
+ "name": "Product or tutorial video",
+ "examples": "app walkthroughs, feature launches, how-to guides",
+ "length_minutes": [2, 5],
+ "aspect": "16:9",
+ "shorts": 3,
+ "research": "feature list + claims checked against the product docs",
+ "visual_style": "clean UI mockups, callouts with pointers, typed captions, simple icons",
+ "art_style_line": "Clean flat vector illustration, brand colours, generous white space, crisp edges.",
+ "characters": "optional presenter (master drawing + patches) or none",
+ "narration": "friendly, clear, second person ('you can...')",
+ "pacing": "one idea per scene; captions for every key step",
+ "music": "upbeat, unobtrusive",
+ "thumbnail": "the product UI + a benefit in 2–4 words"
+}

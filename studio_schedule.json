@@ -1,0 +1,13 @@
+{
+ "_about": "Studio settings. Calendar: each production day makes one episode that posts the next day.",
+ "production": [
+  {"make": "Friday", "post": "Saturday"},
+  {"make": "Monday", "post": "Tuesday"},
+  {"make": "Wednesday", "post": "Thursday"}
+ ],
+ "start_time": "09:00",
+ "default_format": "animated_explainer",
+ "voice_auto_approve_credits": 5000,
+ "gates_owner": ["script", "animatic", "final"],
+ "autopilot_times": ["08:00", "11:00", "14:00", "17:00", "20:00", "23:00"]
+}
