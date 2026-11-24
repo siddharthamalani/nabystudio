@@ -6,7 +6,8 @@ or vertical short-form series. Each format is a small profile in `formats/`.
 
 A coding agent directs (research, script, storyboard, animation, edit, QA), an image model draws the scenes and characters, and a
 text-to-speech service voices them. A code-based video engine (Remotion + Three.js + GSAP) assembles the video. Scheduled jobs move
-each video through its stages and stop at four human approval points: script, voice budget, animatic and final cut.
+each video through its stages. The script passes on its own only when every check passes; the voice budget above a cap, the
+animatic and the final cut always wait for a human.
 Every reviewer note becomes a permanent rule or automated check, so the studio improves with each video.
 
 The workflow ends when the final cut is approved: the files are ready in the video's `out/` folder. Storing and publishing them is
@@ -16,6 +17,11 @@ left to a human.
 Every reviewer note is recorded as a lesson, turned into a rule (ideally an automated check), and read back before the same stage of
 the next video. Final approval is refused while notes are open, and a mistake that repeats must be fixed with a check, not just a note.
 See `engine/learn.py` and `WORKFLOW.md` → Feedback-loop commitment.
+
+## Brand lock and weekly batch
+The look never changes between videos; variety comes from the story, checked automatically. One short guest-style set piece per
+video is allowed from an approved list. Videos are made in a weekly batch (e.g. every Thursday for next Tue/Thu/Sat), so each
+one is finished days before it posts and the human reviews in two or three sittings a week. See `WORKFLOW.md`.
 
 ## Formats
 | Profile | For | Length | Aspect |
@@ -42,13 +48,13 @@ See `WORKFLOW.md` for the method and the rules learned, and `docs/AUTOPILOT.md` 
 ## Engine (`engine/`)
 | Area | Scripts |
 |---|---|
-| Planning | `topics.py` (score + de-duplicate ideas), `lint_brief.py` (blocks bad art briefs) |
+| Planning | `topics.py` (score + de-duplicate ideas), `treatcheck.py` (brand lock, story variety, guest set piece limits), `ledgercheck.py` (real sources, not encyclopedia-only), `lint_brief.py` (blocks bad art briefs) |
 | Voice | `tts.py` (price, cap, generate), `vo_check.py` (blind transcription), `audio_build.py` (cuts only at real pauses), `splice_vo.py`, `visemes.py` / `lipsync.py` (mouth timing) |
 | Art | `cutout.py` + `rembg_cut.py` (transparent cut-outs, hole refill), `face.py` (master drawing + mouth/eye patches), `poses.py`, `rig.py`, `depth.py` (2.5D) |
 | Assembly | `export_remotion.py`, `export_shorts.py`, `remotion/src/studio/Episode.jsx` (3D depth, globe routes, typed documents, callouts, end-screen template, vertical Shorts) |
-| Quality | `placement_check.py` (proof frame per shot + geometry/camera checks), `finish.py` (encode, true-peak fix, Short frame grids), `thumbnails.py` |
+| Quality | `readcheck.py` (on-screen reading time), `placement_check.py` (proof frame per shot + geometry/camera checks), `finish.py` (encode, true-peak fix, Short frame grids), `thumbnails.py` |
 | Learning | `learn.py` (lessons → rules → stage briefs, repeat detection, stats; memory in `memory/`) |
-| Operations | `run.py` (stages + gates, refuses final approval with open notes), `clean.py`; `scripts/` (macOS launchd job) |
+| Operations | `run.py` (stages, gates, automatic script gate when every check passes, weekly batch planning, refuses final approval with open notes), `clean.py`; `scripts/` (macOS launchd job) |
 
 ## Setup
 1. macOS, Python 3.9+, Node (for Remotion), ffmpeg, an image-model CLI, a TTS account.

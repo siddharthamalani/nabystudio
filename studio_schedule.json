@@ -1,13 +1,46 @@
 {
- "_about": "Studio settings. Calendar: each production day makes one episode that posts the next day.",
+ "_about": "Studio settings. Weekly batch: every batch day the studio makes one video for each posting day in the next window_days that has none.",
  "production": [
-  {"make": "Friday", "post": "Saturday"},
-  {"make": "Monday", "post": "Tuesday"},
-  {"make": "Wednesday", "post": "Thursday"}
+  {
+   "make": "Thursday",
+   "post": "Tuesday"
+  },
+  {
+   "make": "Thursday",
+   "post": "Thursday"
+  },
+  {
+   "make": "Thursday",
+   "post": "Saturday"
+  }
  ],
+ "batch": {
+  "day": "Thursday",
+  "window_days": 9,
+  "post_days": [
+   "Tuesday",
+   "Thursday",
+   "Saturday"
+  ]
+ },
  "start_time": "09:00",
  "default_format": "animated_explainer",
  "voice_auto_approve_credits": 5000,
- "gates_owner": ["script", "animatic", "final"],
- "autopilot_times": ["08:00", "11:00", "14:00", "17:00", "20:00", "23:00"]
+ "auto_gates": [
+  "script"
+ ],
+ "gates_owner": [
+  "animatic",
+  "final"
+ ],
+ "guest_styles": [],
+ "_guest_styles": "Approved guest looks for ONE short set piece per video (max 15 s), framed by your house style. Keep the list short.",
+ "autopilot_times": [
+  "08:00",
+  "11:00",
+  "14:00",
+  "17:00",
+  "20:00",
+  "23:00"
+ ]
 }

@@ -34,7 +34,8 @@ def save(items):
     rules_md(items)
 
 
-STOP = {"with", "that", "this", "from", "into", "were", "they", "their", "have", "been", "when", "next", "only", "every", "never"}
+STOP = {"with", "that", "this", "from", "into", "were", "they", "their", "have", "been", "when", "next", "only", "every", "never",
+        "owner", "review", "reviewer", "note", "notes", "director", "autopilot", "episode", "drive"}   # who/where a note came from is not what it is about
 
 
 def stem(w):
@@ -59,7 +60,8 @@ CMAP = {w: c for c, ws in CONCEPTS.items() for w in ws.split()}
 
 def words(t):
     out = set()
-    for w in re.findall(r"[a-z][a-z-]{2,}", t.lower()):
+    t = re.sub(r"\bep\d+\w*", " ", t.lower())
+    for w in re.findall(r"[a-z][a-z-]{2,}", t):
         if w in STOP: continue
         if w in CMAP: out.add(CMAP[w])
         elif len(w) >= 4: out.add(stem(w))

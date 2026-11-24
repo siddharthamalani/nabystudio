@@ -3,7 +3,7 @@
 Applies to every format in `formats/`. Where a rule depends on the format (characters, research, pacing), the profile decides.
 
 ## Roles
-- **Producer (human):** approves the script, the voice budget above the cap, the animatic and the final cut. Publishes.
+- **Producer (human):** approves the voice budget above the cap, the animatic and the final cut; the script gate can be automatic (all checks pass) or manual. Reviewer notes always win. Publishes.
 - **Director (coding agent):** research, script, storyboard, art briefs, animation code, sound, QA, packaging.
 - **Artist (image model):** scenes, characters or presenters on transparent backgrounds, foreground layers, UI mockups, thumbnails; edits a master drawing region by region. The format's style line goes in every prompt.
 - **Voice (TTS):** narrator and characters, with emotion and pause tags; every line priced first.
@@ -19,6 +19,36 @@ The studio learns from every mistake, and the code enforces it (`engine/learn.py
    with an automated check: a rule that failed once isn't trusted as plain text again.
 6. **Measure it.** `learn.py stats` shows lessons per stage, the repeat rate and how many rules are enforced by checks. The aim is
    fewer notes per video and a rising share of automated checks.
+
+## Brand lock
+Viewers must recognise the channel every time. The look never changes between videos: art style line, mascot or presenter,
+colours, fonts, series card, opening and ending, narrator voice, music library. Variety comes from the STORY: each video differs
+from the last two in at least 4 of 6 story aspects (opening, structure, signature moment, camera path, music shape, ending).
+A **guest look** is allowed only as ONE short set piece per video (max 15 s), from a short approved list (`guest_styles`),
+opened and closed in the house style, so even the inserts become familiar. `engine/treatcheck.py` enforces this.
+Code-made film styles (for example the open-source Lemo-Opuscar style library) work well for these inserts: use them for the
+picture only and keep your own narration, music and sound rules. Respect each library's licence (some style docs are non-commercial).
+
+## Directing checklist
+1. **Benchmark:** name 1–2 reference works per video; what to learn, what not to copy.
+2. **Three structures:** write three candidate structures, choose one and say why.
+3. **Not a repeat:** the 4-of-6 story comparison above (never the look).
+4. **Sound:** every visible action has a sound; at least two real silences before a turn; at least two sound bridges across cuts.
+5. **Cut to the music:** key actions and punchline holds land on music beats (a cue map in the storyboard).
+6. **Reading time:** on-screen text stays up at least letters ÷ 15 + 1.5 s; titles at least 4 s (`engine/readcheck.py`).
+7. **Camera:** at least four different camera moves; transitions made from the scene, not plain fades.
+8. **Acting:** a small wind-up before big moves and a settle after; check eyebrow direction at final size.
+9. **Frame strips:** check key actions every 0.2 s, not only on a contact sheet.
+10. **Receipts:** the claim ledger quotes the source's exact wording.
+
+## Script rules (from real reviews)
+- **Hook first:** the first sentence states the title's contradiction; date and setting come after.
+- **Frames are framing:** a device like "four doors" or "five chapters" is never presented as fact; label staged actions too.
+- **Protect the ending:** once the emotional beat lands, only the sign-off and credits follow.
+- **Scoped superlatives:** "most / first / ever" only when a source states exactly that.
+- **Hedges travel:** a hedged or single-source fact keeps its hedge in narration, on-screen receipts, recaps, Shorts, titles and thumbnails, or it's cut.
+- **Real sources:** an encyclopedia is a map, not a receipt. At most 25% of claims may rest only on Wikipedia, and it's never credited; where a primary source disagrees, follow the primary source (`engine/ledgercheck.py`).
+- **Length labels add up:** the target, section timestamps and end screen agree.
 
 ## Rules learned the hard way
 1. Check the back catalogue first: score and de-duplicate every topic.
